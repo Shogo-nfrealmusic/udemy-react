@@ -11,14 +11,14 @@ undefined
 NaN (Not a Number)
 */
 
-const a = 0;
+const a = '0';
 let result = a ? 10 : -10;
-console.log(result);
+// console.log(result);
 
 const falsy = 0;
 const truthy = 1;
-console.log(Boolean(truthy));
-console.log(Boolean(falsy));
+// console.log(Boolean(truthy));
+// console.log(Boolean(falsy));
 
 // 論理積 (&&) について
 const resultA = "" && "foo";
