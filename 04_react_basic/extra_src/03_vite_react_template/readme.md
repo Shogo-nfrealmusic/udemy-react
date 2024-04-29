@@ -1,4 +1,5 @@
 # プロジェクトの作成方法
+npx create-react-app
 
 [Vite](https://ja.vitejs.dev/) というモジュールバンドラーを使ったプロジェクトの作成
 
