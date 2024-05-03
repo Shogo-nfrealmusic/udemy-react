@@ -14,5 +14,8 @@ const Example = () => {
 
 console.log(Example());
 
+
 export default Example;
+
+//コンポーネントもreact要素になる
 
