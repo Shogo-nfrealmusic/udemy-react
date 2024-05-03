@@ -11,7 +11,8 @@ const Example = () => {
         onChange={(e) => {
           console.log(e.target.value);
           setVal(e.target.value);
-          // displayVal = e.target.value;
+
+          displayVal = e.target.value;
         }}
       />
       = {val}
