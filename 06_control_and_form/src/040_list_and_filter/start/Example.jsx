@@ -15,7 +15,7 @@ const Example = () => {
           .filter(animal => animal.indexOf(filterVal) !==
         -1)
           .map((animal) => (
-          <li>{animal}</li>
+          <li key={animal}>{animal}</li>
         ))}
       </ul>
     </>
