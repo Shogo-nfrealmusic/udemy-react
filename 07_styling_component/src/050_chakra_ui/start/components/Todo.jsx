@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { VStack, Heading } from "@chakra-ui/react";
 import List from "./List"
 import Form from "./Form"
 
@@ -33,11 +34,13 @@ const Todo = () => {
   }
 
   return (
-    <>
-      <h2>Reminder</h2>
-      <List todos={todos} deleteTodo={deleteTodo}/>
-      <Form createTodo={createTodo}/>
-    </>
+    <VStack p="10" spacing="10">
+      <Heading color='blue.200' fontSize='5xl'>
+          Reminder
+      </Heading>
+    <List todos={todos} deleteTodo={deleteTodo} />
+    <Form createTodo={createTodo}/>
+    </VStack>
   )
 };
 export default Todo;
