@@ -69,3 +69,4 @@ const Example = () => {
 };
 
 export default Example;
+// difference between js and react
