@@ -24,6 +24,8 @@ const reducer = (prev, { type, step }) => {
 const Example = () => {
   const [state, setState] = useState(0);
   const [rstate, dispatch] = useReducer(reducer, 0);
+
+
   
   const step = 2;
   const countUp = () => {
@@ -31,12 +33,15 @@ const Example = () => {
       return prev + step
     });
   };
+
   const rcountUp = () => {
     dispatch({ type: "+", step: 2 });
   };
+
   const rcountDown = () => {
     dispatch({ type: "-", step: 3 });
   };
+  
   return (
     <>
       <div>
