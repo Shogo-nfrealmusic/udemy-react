@@ -2,34 +2,34 @@ import { useReducer, useState } from "react";
 
 const Example = () => {
   const [state, setState] = useState(0);
-  const [rstate, dispatch] = useReducer
-    ((prev, { type, step}) => {
-      switch(type){
+  const [rstate, dispatch] = useReducer(
+    (prev, { type, step }) => {
+      switch(type) {
         case '+':
           return prev + step;
-          case '-':
-            return prev - step;
-            default:
-              return prev;
+        case '-':
+          return prev - step;
+          default:
+            return prev;
+        
       }
       // if(action === '+') {
-      //   return ++prev;
+      //   return ++ prev;
       // } else if (action === '-') {
-      //   return --prev;
+      //   return -- prev;
       // }
-    }, 0);
-  
+    }, 0
+  );
+
   const countUp = () => {
     setState(prev => ++prev);
   }
   const rcountUp = () => {
-    dispatch({ type: '+', step: 2});
+    dispatch({ type: '+', step: 2 });
   }
   const rcountDown = () => {
-    dispatch({ type: '-', step: 2});
+    dispatch({ type: '-', step: 3 });
   }
-
-  
   return (
     <>
     <div>
