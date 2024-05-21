@@ -24,10 +24,12 @@ const reducer = (prev, { type, step }) => {
 const Example = () => {
   const [state, setState] = useState(0);
   const [rstate, dispatch] = useReducer(reducer, 0);
+  // stateと一緒に更新用の処理を保持
 
 
   
   const step = 2;
+  // コンポーネントで更新用の処理を保持
   const countUp = () => {
     setState((prev) => {
       return prev + step
