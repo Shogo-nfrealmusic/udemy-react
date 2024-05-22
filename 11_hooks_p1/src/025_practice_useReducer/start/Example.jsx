@@ -2,21 +2,22 @@ import { useReducer } from "react";
 
 const CALC_OPTIONS = ["add", "minus", "divide", "multiply"];
 
-const reducer = (state, { type, payload }) => {
+const reducer = (state, { type, payload} ) => {
   switch (type) {
     case 'change':
-      return {...state, [payload.name]: payload.value};
+      return{...state, [payload.name]: payload.value };
     case 'add':
-      return {...state, result: state.a + state.b};
+      return{...state, result: state.a + state.b};
     case 'minus':
-      return {...state, result: state.a - state.b};
-    case 'multiply':
-      return {...state, result: state.a * state.b};
+      return{...state, result: state.a - state.b};
     case 'divide':
-      return {...state, result: state.a / state.b};
+      return{...state, result: state.a / state.b};
+    case 'multiply':
+      return{...state, result: state.a * state.b};
       default:
-        throw new Error('fuck');
-  }
+        throw new Error('不明なタイプです。');
+  };
+  
 }
 
 const Example = () => {
@@ -29,12 +30,11 @@ const Example = () => {
   const [state, dispatch] = useReducer(reducer, initState);
 
   const calculate = (e) => {
-    dispatch({ type: e.target.value})
+    dispatch({ type: e.target.value })
   };
 
   const numChangeHandler = (e) => {
-    dispatch({ type: 'change', payload: {name: e.target.name,
-      value: perseInt(e.target.value) }})
+    dispatch({ type: 'change', payload: {name: e.target.name, value: parseInt(e.target.value) }})
   }
 
   return (
@@ -59,7 +59,7 @@ const Example = () => {
       </div>
       <select value={state.type} onChange={calculate}>
         {CALC_OPTIONS.map(type => {
-          return(
+          return (
             <option key={type} value={type}>
               {type}
             </option>
