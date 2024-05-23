@@ -8,9 +8,10 @@ const Example = () => {
 
   return (
     <MyContext.Provider value={[ value, setValue ]}>
-      <Child />
-      <OtherChild />
+        <Child />
+        <OtherChild />
     </MyContext.Provider>
+    
   );
 };
 
