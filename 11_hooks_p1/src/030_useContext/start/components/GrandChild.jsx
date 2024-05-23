@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { Mycontext } from "../Example";
+import { MyContext } from "../Example";
 const GrandChild = () => {
-  const value = useContext(Mycontext)
+  const value = useContext(MyContext);
   return (
       <div style={{ border: "1px solid black" }}>
         <h3>孫コンポーネント</h3>
