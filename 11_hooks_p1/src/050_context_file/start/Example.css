@@ -15,7 +15,7 @@ header.content-light {
 }
 main.content-light {
   color: #000000;
-  background-color: #ffffff;
+  background-color: #181717;
 }
 header.content-dark {
   color: #ffffff;
@@ -27,7 +27,7 @@ main.content-dark {
 }
 header.content-red {
   color: #ffffff;
-  background-color: #ff7373;
+  background-color: #b16363;
 }
 main.content-red {
   color: #ffffff;
