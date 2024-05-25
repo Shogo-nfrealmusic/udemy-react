@@ -9,6 +9,8 @@ const Counter = () => {
             <CounterButton step={2} calcType="-"/>
             <CounterButton step={100} calcType="+"/>
             <CounterButton step={100} calcType="-"/>
+            <CounterButton step={200} calcType="+"/>
+            <CounterButton step={200} calcType="-"/>
         </>
     )
 }
