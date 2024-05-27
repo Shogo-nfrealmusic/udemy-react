@@ -7,6 +7,10 @@ const Example = () => {
       setTime(prev => prev + 1);
     }, 1000);
   }, []);
+  useEffect(() => {
+    document.title = 'counter:' + time;
+    window.localStorage.setItem('time-key', time);
+  }, [time]);
   return (
     <>
     <h3>
