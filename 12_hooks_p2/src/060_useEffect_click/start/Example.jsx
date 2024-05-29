@@ -6,26 +6,32 @@ const Example = () => {
   return (
     <>
       {isDisp && <Timer/>}
-      <button onClick={() => setIsDisp(prev => !prev)}>トグル</button>
+      <button onClick={() => setIsDisp(prev => !prev)}>
+        {isDisp ? 'hide' : 'show'}</button>
     </>
   )
 }
 
 const Timer = () => {
   const [time, setTime] = useState(0);
+  const [isRunning, setIsRunning] = useState(false);
 
   useEffect(() => {
-    // console.log('init');
+    console.log('init');
     let intervalId = null;
-    intervalId = window.setInterval(() => {
-      // console.log('interval running');
-      setTime(prev => prev + 1);
-    }, 1000);
+    if(isRunning) {
+      console.log('timer start');
+
+      intervalId = window.setInterval(() => {
+        console.log('interval running');
+        setTime(prev => prev + 1);
+      }, 1000);
+    }
     return () => {
       window.clearInterval(intervalId)
-      // console.log('end');
+      console.log('end');
     }
-  }, [])
+  }, [isRunning])
   
   useEffect(() => {
     // console.log('updated');
@@ -46,11 +52,26 @@ const Timer = () => {
     }
   }, [])
 
+  const toggle = () => {
+    setIsRunning(prev => !prev);
+  }
+
+  const reset = () => {
+    setTime(0);
+    setIsRunning(falise);
+  }
+
   return (
-    <h3>
+    <>
+      <h3>
       <time>{time}</time>
       <span>秒経過</span>
-    </h3>
+      </h3>
+      <div>
+        <button onClick={toggle}>{isRunning ? 'Stop': 'start'}</button>
+        <button onClick={reset}>reset</button>
+      </div>
+    </>
     );
 };
 
