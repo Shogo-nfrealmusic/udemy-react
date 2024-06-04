@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from "react";
 import Child from "./Child";
+import "./Example.css";
 
 const Example = () => {
   console.log("Parent render");
