@@ -1,9 +1,24 @@
+import { useState } from "react";
+import "./Example.css";
+
 const Example = () => {
+  console.log('render');
+
+  const [countA, setCountA] = useState(0);
   return (
     <>
-    <h3>再レンダリングが発生する条件</h3>
-    <p>stateの値が変更された時</p>
-    <p>Object.isによって変更は検知される</p>
+      <div className="parent">
+        <div>
+          <h3>再レンダリング？</h3>
+          <button onClick={() => {
+            setCountA(1);
+          }}>ボタンA
+          </button>
+        </div>
+        <div>
+          <p>ボタンAクリック回数:{countA}</p>
+        </div>
+      </div>
     </>
   );
 };
