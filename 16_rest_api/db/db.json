@@ -15,10 +15,6 @@
       "content": "買い物",
       "editing": false,
       "completed": false
-    },
-    {
-      "id": 3323223,
-      "content": "test"
     }
   ],
   "user": [
@@ -48,16 +44,6 @@
       "hobbies": [
         "筋トレ",
         "水泳"
-      ],
-      "premiumAccount": true
-    },
-    {
-      "id": 10,
-      "username": "hogeマツダ",
-      "age": 20,
-      "hobbies": [
-        "バスケ",
-        "野球"
       ],
       "premiumAccount": true
     }
