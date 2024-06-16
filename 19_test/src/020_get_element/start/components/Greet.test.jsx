@@ -14,6 +14,12 @@ it('should have h1 tag', () => {
     // debug(imgEl);
 
     // const headingEl = screen.getByRole('heading', { name: 'こんにちは'})
-    const h2El = container.querySelector('h2');
-    debug(h2El);
+    // const h2El = container.querySelector('h2');
+    // debug(h2El);
+
+    // const elByLabel = screen.getByLabelText('氏名')
+    // debug(elByLabel)
+
+    const elByPlaceholder = screen.getByPlaceholderText('Code Mafia');
+     debug(elByPlaceholder);
 })
